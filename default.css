@@ -249,19 +249,19 @@ ul {
 }
 #skills {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: var(--previewShadow);
 }
 .social-links {
-  padding: 50px 0px;
+  padding-bottom: 50px;
   display: grid;
   align-content: center;
   text-align: center;
+  justify-items: center;
 }
 #social__image {
-  width: 100%;
+  width: 200px;
 }
 .post-wrapper {
   display: grid;
@@ -342,6 +342,23 @@ ul {
   background-color: var(--buttonColor);
   border: none;
 }
+.post {
+  position: relative;
+}
+.status {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
+.status_progress {
+  color: orange;
+}
+.status_ready {
+  color: green;
+}
+.status_missed {
+  color: red;
+}
 @media screen and (max-width: 1200px) {
   .main-container {
     width: 95%;
@@ -358,5 +375,13 @@ ul {
   .right-column {
     justify-content: center;
     padding-bottom: 80px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #preview-shadow {
+    padding-left: 0;
+    padding-top: 0;
+    background-color: var(--mainColor);
+    width: auto;
   }
 }
